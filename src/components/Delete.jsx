@@ -10,9 +10,10 @@ export default function Delete(){
         {deleteOn && <div data-testid="alert" id="alert">
             <h2>Are you sure?</h2>
             <p>These changes can't be reverted!</p>
-            <button >Proceed</button>
+         <OurButton clickFunction={()=>setDeleteOn(false)}>Proceed</OurButton>
         </div>}
-        <OurButton clickFunction={()=>setDeleteOn(true)}>Delete</OurButton>
+          {!deleteOn &&
+        <OurButton clickFunction={()=>setDeleteOn(true)}>Delete</OurButton>}
         
         </div>    
       );
