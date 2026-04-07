@@ -12,6 +12,7 @@ import OurButton from './components/OurButton'
 import Login from './components/auth/Login'
 import Discount from './components/Discount'
 import { EXAMPLES } from './data/coreConcepts'
+import Delete from './components/Delete'
 
 
 
@@ -33,20 +34,20 @@ function App() {
       setMyContent(subject)
     }
 
-
   return (
     <>
       <h3>Eventos Dinâmicos</h3>
       <menu>
-        <OurButton clickFunction={()=>content('jsx')} >JSX</OurButton>
-        <OurButton clickFunction={()=>content('props')}>Props</OurButton>
-        <OurButton clickFunction={()=>content('state')}>State</OurButton>
+        <OurButton isActive={myContent =='jsx'} clickFunction={()=>content('jsx')} >JSX</OurButton>
+        <OurButton isActive={myContent =='props'}   clickFunction={()=>content('props')}>Props</OurButton>
+        <OurButton isActive={myContent =='state'} clickFunction={()=>content('state')}>State</OurButton>
       </menu>
       <div>
-        <h5>Título:{myContent}</h5>
+        <h5>Título:{EXAMPLES[myContent].title? EXAMPLES[myContent].title :myContent}</h5>
         <p>Descrição:{EXAMPLES[myContent].description}</p>
       </div>
 
+      <Delete/>
 
       <section id="center">
         <Discount/>
