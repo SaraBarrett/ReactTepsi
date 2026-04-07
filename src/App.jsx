@@ -9,17 +9,49 @@ import user from './data/user'
 import goals from './data/goals'
 import { CourseGoal } from './components/CourseGoal'
 import OurButton from './components/OurButton'
+import Login from './components/auth/Login'
+import Discount from './components/Discount'
+import { EXAMPLES } from './data/coreConcepts'
 
 
 
 function App() {
   const [count, setCount] = useState(0)
+  const [myContent, setMyContent] = useState('components');
+
+
+      function hello(){
+        alert('hello world!')
+    }
+
+      function goodbye(){
+        alert('goodbye world!')
+    }
+
+    
+    function content(subject){
+      setMyContent(subject)
+    }
+
 
   return (
     <>
-      
+      <h3>Eventos Dinâmicos</h3>
+      <menu>
+        <OurButton clickFunction={()=>content('jsx')} >JSX</OurButton>
+        <OurButton clickFunction={()=>content('props')}>Props</OurButton>
+        <OurButton clickFunction={()=>content('state')}>State</OurButton>
+      </menu>
+      <div>
+        <h5>Título:{myContent}</h5>
+        <p>Descrição:{EXAMPLES[myContent].description}</p>
+      </div>
+
+
       <section id="center">
-      <OurButton/>
+        <Discount/>
+        <OurButton clickFunction={hello}>Login</OurButton>
+        <OurButton clickFunction={goodbye}>Logout</OurButton>
         <FirstComponent 
         name = 'Tiago'
         job= 'Marketing Digital'
@@ -41,7 +73,7 @@ function App() {
         <MainGoal
         objective={goals[2]}
         />
-
+           <Login/>
         <div className="hero">
           <img src={heroImg} className="base" width="170" height="179" alt="" />
           <img src={reactLogo} className="framework" alt="React logo" />
@@ -63,6 +95,7 @@ function App() {
       </section>
 
       <div className="ticks"></div>
+ 
 
       <section id="next-steps">
         <div id="docs">
@@ -151,8 +184,8 @@ function App() {
 
       <div className="ticks"></div>
       <section id="spacer"></section>
-    </>
+  </>
   )
 }
 
-export default App
+export default App;
