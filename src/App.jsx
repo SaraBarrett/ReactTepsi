@@ -7,7 +7,7 @@ import { Exs } from "./pages/Exs";
 import { RootLayout } from "./components/RootLayout";
 import { ErrorPage } from "./pages/ErrorPage";
 import { HelloUser } from "./pages/HelloUser";
-
+import PlacesToVisit from "./pages/PlacesToVisit";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +20,7 @@ const router = createBrowserRouter([
       { path: "/exs", element: <Exs /> },
       { path: "/", element: <Homepage /> },
       { path: "/user/:name", element: <HelloUser /> },
+      { path: "/places", element: <PlacesToVisit/> },
     ],
   },
 ]);
