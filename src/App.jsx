@@ -8,6 +8,7 @@ import { RootLayout } from "./components/RootLayout";
 import { ErrorPage } from "./pages/ErrorPage";
 import { HelloUser } from "./pages/HelloUser";
 import PlacesToVisit from "./pages/PlacesToVisit";
+import { StarWars } from "./pages/StarWars";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,9 @@ const router = createBrowserRouter([
       { path: "/", element: <Homepage /> },
       { path: "/user/:name", element: <HelloUser /> },
       { path: "/places", element: <PlacesToVisit/> },
+   { path: "/StarWars", element: <StarWars/> },
+
+      
     ],
   },
 ]);
