@@ -1,26 +1,32 @@
 [
   {
-    "email": "sara.c.mon@gmail.com",
-    "password": "sara.c.mon@gmail.com",
-    "firstName": "Sara",
-    "lastName": "Monteiro",
-    "role": "employee",
-    "termsAccepted": true
+    "email": "utilizador@gusronk.com",
+    "password": "utilizador@gusronk.com",
+    "type": "user"
   },
   {
-    "email": "sara.c.mon@gmail.com",
-    "password": "sara.c.mon@gmail.com",
-    "firstName": "Sara",
-    "lastName": "Monteiro",
-    "role": "student",
-    "termsAccepted": true
+    "email": "utilizador@gusronk.com",
+    "password": "utilizador@gusronk.com",
+    "type": "user"
   },
   {
-    "email": "saramarmonteiro@gmail.com",
-    "password": "saramarmonteiro@gmail.com",
-    "firstName": "Sara",
-    "lastName": "Monteiro",
-    "role": "student",
-    "termsAccepted": true
+    "email": "utilizador@gusronk.com",
+    "password": "123",
+    "type": "user"
+  },
+  {
+    "email": "utilizador@gusronk.com",
+    "password": "utilizador@gusronk.com",
+    "type": "user"
+  },
+  {
+    "email": "utilizador@gusronk.com",
+    "password": "gusronk.com",
+    "type": "user"
+  },
+  {
+    "email": "utilizador@gusronk.com",
+    "password": "utilizador",
+    "type": "user"
   }
 ]

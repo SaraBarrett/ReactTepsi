@@ -9,6 +9,7 @@ import { ErrorPage } from "./pages/ErrorPage";
 import { HelloUser } from "./pages/HelloUser";
 import PlacesToVisit from "./pages/PlacesToVisit";
 import { StarWars } from "./pages/StarWars";
+import { Signup } from "./pages/Signup";
 
 const router = createBrowserRouter([
   {
@@ -22,8 +23,8 @@ const router = createBrowserRouter([
       { path: "/", element: <Homepage /> },
       { path: "/user/:name", element: <HelloUser /> },
       { path: "/places", element: <PlacesToVisit/> },
-   { path: "/StarWars", element: <StarWars/> },
-
+      { path: "/StarWars", element: <StarWars/> },
+      { path: "/Signup", element: <Signup/> },
       
     ],
   },

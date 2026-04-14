@@ -1,8 +1,12 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export const Homepage = () => {
+  const location = useLocation();
+  const message = location.state?.message;
+
   return (
     <div>
+      {message && <p>{message}</p>}
       <div>Homepage</div>
       <h4>As minhas funcionalidades</h4>
       <Link to="/shopping">Shopping</Link>
