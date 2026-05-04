@@ -14,9 +14,12 @@ export const Homepage = () => {
       <Link to="/exs">Exs</Link>
       <br />
       <Link to="/events">Events</Link>
+      <br />
       <Link to="/StarWars">StarWars</Link>
       <br />
       <Link to="/places">Lugares a Visitar</Link>
+      <br />
+      <Link to="/Signup">Registo</Link>
     </div>
   );
 };
