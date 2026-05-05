@@ -10,6 +10,8 @@ import { HelloUser } from "./pages/HelloUser";
 import PlacesToVisit from "./pages/PlacesToVisit";
 import { StarWars } from "./pages/StarWars";
 import { Signup } from "./pages/Signup";
+import LoginForm from "./pages/LoginForm";
+import { AuthProvider } from "./contexts/AuthContext";
 
 const router = createBrowserRouter([
   {
@@ -22,16 +24,20 @@ const router = createBrowserRouter([
       { path: "/exs", element: <Exs /> },
       { path: "/", element: <Homepage /> },
       { path: "/user/:name", element: <HelloUser /> },
-      { path: "/places", element: <PlacesToVisit/> },
-      { path: "/StarWars", element: <StarWars/> },
-      { path: "/Signup", element: <Signup/> },
-      
+      { path: "/places", element: <PlacesToVisit /> },
+      { path: "/StarWars", element: <StarWars /> },
+      { path: "/Signup", element: <Signup /> },
+      { path: "/login", element: <LoginForm /> },
     ],
   },
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
+  );
 }
 
 export default App;

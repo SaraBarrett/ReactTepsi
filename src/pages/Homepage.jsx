@@ -20,6 +20,8 @@ export const Homepage = () => {
       <Link to="/places">Lugares a Visitar</Link>
       <br />
       <Link to="/Signup">Registo</Link>
+      <br />
+      <Link to="/login">Login</Link>
     </div>
   );
 };
