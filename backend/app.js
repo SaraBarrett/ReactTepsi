@@ -71,7 +71,7 @@ app.post("/login", async (req, res) => {
 
   const AuthUser = {
     name: login.name,
-    role: login.role,
+    type: login.type,
   };
 
   res.json(AuthUser);
