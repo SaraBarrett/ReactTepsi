@@ -1,8 +1,13 @@
+import { useContext } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { AuthContext } from "../contexts/AuthContext";
 
 export const Homepage = () => {
   const location = useLocation();
   const message = location.state?.message;
+
+  const { user, logout } = useContext(AuthContext);
+  console.log(user)
 
   return (
     <div>
@@ -17,11 +22,20 @@ export const Homepage = () => {
       <br />
       <Link to="/StarWars">StarWars</Link>
       <br />
-      <Link to="/places">Lugares a Visitar</Link>
+
+      {user && user.type == "student" && <Link to="/places">Lugares a Visitar</Link>}
+
       <br />
-      <Link to="/Signup">Registo</Link>
-      <br />
-      <Link to="/login">Login</Link>
+      {!user ? (
+        <div>
+          <Link to="/Signup">Registo</Link>
+          <br />
+          <Link to="/login">Login</Link>
+          <br />
+        </div>
+      ) : (
+        <button onClick={logout}>Logout</button>
+      )}
     </div>
   );
 };

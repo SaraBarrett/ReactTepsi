@@ -5,10 +5,10 @@ import { useNavigate } from "react-router-dom";
 export default function LoginForm() {
     const navigate = useNavigate();
     const {login} = useContext(AuthContext);
+
+
     async function handleLogin(event){
   
-    
-
         event.preventDefault();
 
         const formData = new FormData(event.target);
@@ -16,7 +16,7 @@ export default function LoginForm() {
         console.log(data);
 
         let success = await login(data);
-        console.log('c');
+   
         if(success){
           navigate('/');
         }else{

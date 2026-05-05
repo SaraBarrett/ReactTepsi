@@ -28,7 +28,7 @@ export const AuthProvider = ({ children }) => {
       }
 
       const data = await response.json();
-      const userData = { role: data.role, name: data.name };
+      const userData = { type: data.type, name: data.name };
       setUser(userData);
       localStorage.setItem("user", JSON.stringify(userData));
       return true;

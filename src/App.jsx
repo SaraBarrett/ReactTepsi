@@ -12,6 +12,7 @@ import { StarWars } from "./pages/StarWars";
 import { Signup } from "./pages/Signup";
 import LoginForm from "./pages/LoginForm";
 import { AuthProvider } from "./contexts/AuthContext";
+import StudentProtection from "./protectedRoutes/studentProtection";
 
 const router = createBrowserRouter([
   {
@@ -24,7 +25,7 @@ const router = createBrowserRouter([
       { path: "/exs", element: <Exs /> },
       { path: "/", element: <Homepage /> },
       { path: "/user/:name", element: <HelloUser /> },
-      { path: "/places", element: <PlacesToVisit /> },
+      { path: "/places", element:<StudentProtection element={<PlacesToVisit/>} /> },
       { path: "/StarWars", element: <StarWars /> },
       { path: "/Signup", element: <Signup /> },
       { path: "/login", element: <LoginForm /> },
